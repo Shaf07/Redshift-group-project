@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>Profile</title>
+
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <input type="checkbox" name="" id="chk1">
+        <a href="../index.html">
+            <img class="logo" src="../media/Logo.png"></a>
+        <h2> Redshift </h2>
+        <div class="search-box">
+            <form>
+                <input type="text" name="search" id="srch" placeholder="Enter Citizen ID">
+                <button type="submit" id="srch-btn"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+
+            <!-- Add drop down menu -->
+            <div class="dropdown active">
+                <li>
+                    <button class="dropbtn">Search
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                </li>
+                <div class="dropdown-content">
+                    <a href="./profile.html">Profile Search</a>
+                    <a href="./searchVehicle.html">Vehicle Search</a>
+                </div>
+            </div>
+
+            <li><a href="./about.html">About</a></li>
+        </ul>
+
+        <div class="menu">
+            <label for="chk1">
+                <i class="fa fa-bars"></i>
+            </label>
+        </div>
+    </header>
+
+    <!-- Parallax Scroll Top Div -->
+
+    <div class="parallax1">
+
+        <h2>Profile</h2>
+
+        <div class="searchBarContainer">
+            <form class="searchBar">
+                <input type="text" placeholder="Forenames" required>
+                <input type="text" placeholder="Surname" required>
+                <button type="submit"><img src="../media/search-icon.png"></button>
+            </form>
+        </div>
+
+        <h6 style="text-align: center">
+            Please enter name and surname of the individual profile(s) you would like to view above and click the icon to search.
+        </h6>
+
+    </div>
+
+    <!-- Biographical Information Div -->
+
+    <div class="bioContainer">
+
+        <!-- Profile Picture -->
+
+        <div class="profilePicture">
+            <img id="profilePicture" src="../media/pic_icon.png" />
+        </div>
+
+        <!-- Biographical Information -->
+
+        <div class="bioInfo" id="bio">
+            <p class="bioInfo" id="firstName">
+                <strong>First Name: </strong>
+            </p>
+            <p class="bioInfo" id="lastName">
+                <strong>Last Name: </strong>
+            </p>
+            <p class="bioInfo" id="id">
+                <strong>ID: </strong>
+            </p>
+            <p class="bioInfo" id="address">
+                <strong>Address: </strong>
+            </p>
+            <p class="bioInfo" id="dob">
+                <strong>Date of Birth: </strong>
+            </p>
+            <p class="bioInfo" id="pob">
+                <strong>Place of Birth: </strong>
+            </p>
+            <p class="bioInfo" id="sex">
+                <strong>Sex: </strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Parallax Scroll Passport Div -->
+
+    <div class="parallax2">
+        <img src="../media/passport.png">
+
+        <div class="passportContainer">
+            <p class="passport" id="passportNumber">
+                <strong>Passport Number: </strong>
+            </p>
+            <p class="passport" id="nationality">
+                <strong>Nationality: </strong>
+            </p>
+            <p class="passport" id="issuingCountry">
+                <strong>Issuing Country: </strong>
+            </p>
+            <p class="passport" id="doi">
+                <strong>Date of Issue: </strong>
+            </p>
+            <p class="passport" id="doe">
+                <strong>Date of Expiry: </strong>
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Mid Page Nav Bar -->
+
+    <div class="navBarMid">
+        <div class="active" id="financialbutton">
+            <a onclick="togglePane('financial')"><b>Financial Transactions</b></a>
+            <!-- <b>Financial Transactions</b> -->
+        </div>
+        <div id="associatesbutton">
+            <a onclick="togglePane('associates')"><b>Call Records</b></a>
+        </div>
+        <div id="vehiclesbutton">
+            <a onclick="togglePane('vehicles')"><b>Vehicles</b></a>
+        </div>
+        <div id="wherebutton">
+            <a onclick="togglePane('whereabouts')"><b>Whereabouts</b></a>
+        </div>
+    </div>
+
+    <!-- Financial Transactions Tables -->
+
+    <!-- EPOS Table -->
+
+    <div class="tables" id="financialDiv">
+
+        <h1 class="tableTitle">EPOS</h1>
+
+        <table id="table">
+            <tr class="eposTable">
+                <th id="epoTimeStamp">Time Stamp</th>
+                <th id="epoId">EPOS ID</th>
+                <th id="vendor">Vendor</th>
+                <th id="bankCard">Bank Card Number</th>
+                <th id="payee">Payee Account</th>
+                <th id="amount">Amount</th>
+            </tr>
+            <tbody></tbody>
+            <!-- <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr> -->
+        </table>
+
+        <!-- ATM Table -->
+
+        <h1 class="tableTitle">ATM</h1>
+
+        <table id="table">
+            <tr>
+                <th>Time Stamp</th>
+                <th>ATM ID</th>
+                <th>Operator</th>
+                <th>Type</th>
+                <th>Bank Card Number</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+
+        <!-- Bank Cards Table -->
+
+        <h1 class="tableTitle">Bank Cards</h1>
+
+        <table id="table">
+            <tr>
+                <th>Bank Card ID</th>
+                <th>Card Number</th>
+                <th>Sort Code</th>
+                <th>Bank Account ID</th>
+                <th>Account Number</th>
+                <th>Bank</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Call records -->
+    <div class="associates" id="associatesDiv" style="display: none">
+
+        <h1 class="tableTitle">Calls</h1>
+
+        <table id="table">
+            <tr>
+                <th>Time Stamp</th>
+                <th>Call Type</th>
+                <th>Forenames</th>
+                <th>Surname</th>
+                <th>Mobile Number</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <br />
+
+    <!-- vehicles -->
+    <div class="vehicles" id="vehiclesDiv" style="display: none">
+
+        <h1 class="tableTitle">Vehicles</h1>
+
+        <a href="">
+            <div class="vehicleContainer">
+
+                <img src="../media/car icon.png">
+
+                <div class="vehicleDiv">
+
+                    <p class="vehicles" id="vehicleReg">
+                        <strong>Vehicle Registration</strong> AA00 AAA
+                    </p>
+                    <p class="vehicles" id="vehicalMake">
+                        <strong>Make</strong> Lorem Ipsum
+                    </p>
+                    <p class="vehicles" id="vehicleModel">
+                        <strong>Model</strong> A0
+                    </p>
+                    <p class="vehicles" id="vehicleColour">
+                        <strong>Colour</strong> Lorem
+                    </p>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="">
+            <div class="vehicleContainer">
+
+                <img src="../media/car icon.png">
+
+                <div class="vehicleDiv">
+
+                    <p class="vehicles" id="vehicleReg">
+                        <strong>Vehicle Registration</strong> AA00 AAA
+                    </p>
+                    <p class="vehicles" id="vehicalMake">
+                        <strong>Make</strong> Lorem Ipsum
+                    </p>
+                    <p class="vehicles" id="vehicleModel">
+                        <strong>Model</strong> A0
+                    </p>
+                    <p class="vehicles" id="vehicleColour">
+                        <strong>Colour</strong> Lorem
+                    </p>
+                </div>
+
+            </div>
+        </a>
+
+        <a href="">
+            <div class="vehicleContainer">
+
+                <img src="../media/car icon.png">
+
+                <div class="vehicleDiv">
+
+                    <p class="vehicles" id="vehicleReg">
+                        <strong>Vehicle Registration</strong> AA00 AAA
+                    </p>
+                    <p class="vehicles" id="vehicalMake">
+                        <strong>Make</strong> Lorem Ipsum
+                    </p>
+                    <p class="vehicles" id="vehicleModel">
+                        <strong>Model</strong> A0
+                    </p>
+                    <p class="vehicles" id="vehicleColour">
+                        <strong>Colour</strong> Lorem
+                    </p>
+                </div>
+
+            </div>
+        </a>
+
+
+    </div>
+
+
+
+    <!-- whereabouts -->
+    </div>
+    <div class="tables" id="whereDiv" style="display:none">
+
+        <h1 class="tableTitle">Locations Visited</h1>
+
+        <table id="table">
+            <tr>
+                <th>Time Stamp</th>
+                <th>Location Type</th>
+                <th>Street Name</th>
+                <th>Postcode</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/profile.js"></script>
+
+</body>
+
+</html>

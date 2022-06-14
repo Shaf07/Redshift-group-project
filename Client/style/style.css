@@ -1,0 +1,535 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     color: white;
+ }
+
+ header {
+     width: 100%;
+     height: 70px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     z-index: 99;
+     box-shadow: 0 0 10px #000;
+     background: rgba(0, 0, 0, 0.555);
+ }
+
+ #chk1 {
+     display: none;
+ }
+
+ i {
+     color: #fff;
+     cursor: pointer;
+ }
+
+ header .logo {
+     flex: 1;
+     color: #fff;
+     margin-right: auto;
+     margin-left: 30px;
+     text-transform: uppercase;
+     font-size: 15px;
+ }
+
+ h1 {
+     font-size: 50px;
+     text-shadow: 1px 1px 1px rgba(11, 11, 11, 0.444),
+         1px 1px 3px rgba(0, 0, 0, 0.444);
+ }
+
+ h2 {
+     color: #fff;
+     margin-right: 100px;
+     margin-left: 10px;
+ }
+
+ h3 {
+     font-size: 40px;
+     text-shadow: 1px 1px 1px rgba(11, 11, 11, 0.444),
+         1px 1px 3px rgba(0, 0, 0, 0.444);
+ }
+
+ /* p {
+    color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    display: inline-block;
+ } */
+
+ header .search-box {
+     flex: 1;
+     position: relative;
+ }
+
+ .search-box input {
+     width: 100%;
+     height: 40px;
+     border: none;
+     outline: none;
+     background: #d9d9d9c3;
+     border-radius: 30px;
+     color: rgb(255, 255, 255);
+     font-size: 16px;
+     padding-left: 5px;
+     padding-right: 40px;
+     text-align: center;
+ }
+
+ .search-box button {
+     cursor: pointer;
+     width: 40px;
+     height: 40px;
+     border-radius: 30px;
+     border: none;
+     position: absolute;
+     top: 5;
+     right: 0;
+     transform: scale(0.8);
+     background: rgb(128, 0, 0);
+     color: #fff;
+ }
+
+ header ul {
+     flex: 2;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+ }
+
+ header ul li {
+     list-style: none;
+ }
+
+ header ul li a {
+     text-decoration: none;
+     color: #fff;
+     font-weight: 600;
+     text-transform: uppercase;
+     padding: 10px 15px;
+ }
+
+ header ul li a:hover {
+     border-bottom: 2px solid rgb(148, 19, 19);
+ }
+
+ header .menu {
+     font-size: 2.5em;
+     display: none;
+ }
+
+ header ul li a.active {
+     border-bottom: 2px solid rgb(148, 19, 19);
+     background-color: rgba(156, 42, 42, 0.42);
+ }
+
+ @media(max-width:1000px) {
+     .search-box button {
+         position: absolute;
+     }
+
+     header ul {
+         position: fixed;
+         top: 100px;
+         right: -100%;
+         background: rgba(0, 0, 0, 0.555);
+         height: calc(100vh - 100px);
+         width: 50%;
+         flex-direction: column;
+         align-items: center;
+         transition: right 0.5s linear;
+     }
+
+     header .menu {
+         display: block;
+         width: 100px;
+         text-align: center;
+     }
+
+     #chk1:checked~ul {
+         right: 0;
+
+     }
+
+ }
+
+ body {
+     margin: 0;
+     padding: 0;
+     background-color: #000000;
+ }
+
+ /* The vw and vh units ensure that the hero image covers the entire viewport size. */
+ .hero {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+ }
+
+ /* The ::before pseudo-element and absolute positioning make it possible to apply the brightness filter only to the background image (but not to the content shown on top of it). Makes it easy to read. */
+ .hero::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url(../media/background.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     filter: brightness(50%);
+ }
+
+ .hero-content {
+     position: relative;
+ }
+
+ /* Flexbox and the text-align property center the content on top of the hero image. */
+ .hero {
+     position: relative;
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .hero-content {
+     position: relative;
+     font-family: "Monserrat", sans-serif;
+     color: white;
+     text-align: center;
+     margin: 0.625rem;
+     font-size: 2vw;
+ }
+
+ .hero-title {
+     font-size: 3vw;
+     font-weight: 600;
+     margin-bottom: 0;
+     text-align: center;
+ }
+
+ .hero-subtitle {
+     font-size: 1.1vw;
+     list-style: 1.1vw;
+     font-weight: 150;
+     margin-top: 2rem;
+     margin-left: 5rem;
+     margin-right: 5rem;
+     align-items: center;
+     justify-content: center;
+     text-shadow: 1px 1px 1px rgba(11, 11, 11, 0.444),
+         1px 1px 3px rgba(0, 0, 0, 0.444);
+ }
+
+ .hero-button {
+     background-color: #ae2d2d;
+     color: white;
+     border: 1px solid #cb3737;
+     margin-top: 5rem;
+     padding: 0.9375rem 1.875rem;
+     font-family: "Monserrat", sans-serif;
+     font-size: 1.125rem;
+     font-weight: 200;
+     cursor: pointer;
+ }
+
+ .hero-button:hover {
+     background-color: #cb3737;
+     border: 1px solid #db7575;
+ }
+
+ .logo {
+     display: inline-block;
+     vertical-align: top;
+     width: auto;
+     height: 42px;
+     margin-left: 0px;
+     margin-right: 10px;
+     margin-top: 0px;
+ }
+
+ /* Black background */
+ .backToBlack {
+     background-color: rgba(0, 0, 0, 0.688);
+     display: flex;
+     justify-content: center;
+     padding: 20px;
+     font-style: normal;
+     color: aliceblue;
+ }
+
+ .centreText {
+     margin: auto;
+     text-align: center;
+     display: inline-block;
+     justify-content: center;
+ }
+
+ /* a container for images */
+ .container {
+     background: rgba(0, 0, 0, 0.767);
+     margin: auto 0;
+     position: relative;
+     display: flex;
+     justify-content: space-evenly;
+     flex-direction: row;
+     /* flex-wrap: wrap; */
+     border-radius: 1%;
+ }
+
+ .container .box {
+     position: relative;
+     background: rgba(0, 0, 0, 0);
+     margin: 10px;
+     box-sizing: border-box;
+     display: inline-block;
+     justify-content: center;
+ }
+
+ .container .box .imgBox {
+     position: relative;
+ }
+
+ .container .box .imgBox img {
+     max-width: 97%;
+     transition: transform 2s;
+ }
+
+ /* using hover to scale the image up  */
+ .container .box:hover .imgBox img {
+     transform: scale(1.07);
+ }
+
+ .centreText {
+     margin: auto;
+     text-align: center;
+     display: inline-block;
+     justify-content: center;
+ }
+
+ /* Style inputs with type="text", select elements and textareas */
+ input[type=text],
+ select,
+ textarea {
+     width: 100%;
+     /* Full width */
+     padding: 10px;
+     /* Some padding */
+     border: 1px solid #ccc;
+     /* Gray border */
+     border-radius: 5px;
+     /* Rounded borders */
+     box-sizing: border-box;
+     /* Make sure that padding and width stays in place */
+     margin-top: 6px;
+     /* Add a top margin */
+     margin-bottom: 16px;
+     /* Bottom margin */
+     resize: vertical;
+     /* Allow the user to vertically resize the textarea (not horizontally) */
+ }
+
+ /* Style the submit button with a specific background color etc */
+ input[type=submit] {
+     background-color: #ae2d2d;
+     color: white;
+     padding: 10px 28px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     border: 1px solid #db7575;
+ }
+
+ /* When moving the mouse over the submit button, add a darker green color */
+ input[type=submit]:hover {
+     background-color: #cb3737
+ }
+
+ /* Add a background color and some padding around the form */
+ .holder {
+     color: aliceblue;
+     border-radius: 5px;
+     background-color: #2b161600;
+     padding: 20px;
+ }
+
+ /* backround for the form with border radius */
+ .background {
+     background-color: #5c000093;
+     display: block;
+     justify-content: center;
+     align-items: center;
+     padding: 7px;
+     border: 1px solid rgba(255, 6, 6, 0.242);
+     margin: auto;
+     width: 50%;
+ }
+
+
+ /* Search Page Search Bar  */
+
+ .searchBar button {
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     border: 0;
+     background: transparent;
+     cursor: pointer;
+ }
+
+ .searchBar img {
+     width: 30px;
+     height: 30px;
+ }
+
+ .searchBarContainer {
+     width: 100%;
+     min-height: 10vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .searchBar {
+     width: 100%;
+     max-width: 600px;
+     min-height: 10px;
+     background: rgba(255, 255, 255, 0.738);
+     display: flex;
+     align-items: center;
+     border-radius: 60px;
+     padding: 0px 10px;
+ }
+
+ .searchBar input {
+     background: transparent;
+     flex: 1;
+     border: 0;
+     outline: none;
+     padding: 0px 10px;
+     margin: 0%;
+     font-size: 15px;
+     color: rgb(0, 0, 0);
+ }
+
+ ::placeholder {
+     color: rgb(255, 255, 255);
+ }
+
+ /* Vehicles */
+
+ .vehicles {
+     margin-left: 5%;
+     margin-top: 7%;
+ }
+
+ .vehicleDiv p {
+     width: 90%;
+     overflow: hidden;
+     margin: auto;
+     padding-bottom: 4%;
+ }
+
+ .vehicleContainer {
+     border-style: solid;
+     border-color: white;
+     border-width: 2px;
+     width: 50%;
+     min-height: fit-content;
+     margin-top: 3%;
+     padding-top: 2%;
+     padding-bottom: 1%;
+     padding-left: 3%;
+     padding-right: 3%;
+ }
+
+ .vehicles img {
+     background: rgb(8, 242, 234);
+     border-radius: 50%;
+     width: 150px;
+     filter: invert();
+ }
+
+ .vehicleDiv {
+     width: 50%;
+     float: right;
+     vertical-align: middle;
+     font-size: 17px;
+     padding-top: 2%;
+ }
+
+ /* Drop Down Menu */
+
+ /* Dropdown button */
+ .dropdown .dropbtn {
+     padding: 10px 15px;
+     border: none;
+     outline: none;
+     color: white;
+     padding: 10px 15px;
+     background-color: inherit;
+     font-family: inherit;
+     font-size: inherit;
+     text-decoration: none;
+     color: #fff;
+     font-weight: 600;
+     text-transform: uppercase;
+     /* Important for vertical align on mobile phones */
+     margin: 0;
+     /* Important for vertical align on mobile phones */
+ }
+
+ /* Add a red background color to navbar links on hover */
+ .navbar a:hover,
+ .dropdown:hover .dropbtn {
+     border-bottom: 2px solid rgb(148, 19, 19);
+     background-color: rgba(156, 42, 42, 0.42);
+
+ }
+
+ /* Dropdown content (hidden by default) */
+ .dropdown-content {
+     display: none;
+     position: absolute;
+     border-bottom: 2px solid rgb(148, 19, 19);
+     background: rgba(0, 0, 0, 0.555);
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1;
+ }
+
+ /* Links inside the dropdown */
+ .dropdown-content a {
+     float: none;
+     color: rgb(255, 255, 255);
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+     text-align: left;
+ }
+
+ /* Add a grey background color to dropdown links on hover */
+ .dropdown-content a:hover {
+     border-bottom: 2px solid rgb(148, 19, 19);
+     background-color: rgba(156, 42, 42, 0.42);
+ }
+
+ /* Show the dropdown menu on hover */
+ .dropdown:hover .dropdown-content {
+     display: block;
+ }
+
+ /* active on search */
+ .active {
+     border-bottom: 2px solid rgb(148, 19, 19);
+     background-color: rgba(156, 42, 42, 0.42);
+ }

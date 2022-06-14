@@ -1,0 +1,182 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../style/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <input type="checkbox" name="" id="chk1">
+            <a href="../index.html">
+                <img class="logo" src="../media/Logo.png"></a>
+            <h2> Redshift </h2>
+            <div class="search-box">
+                <form>
+                    <input type="text" name="search" id="srch" placeholder="Enter Citizen ID">
+                    <button class="nav-button" type="submit" id="srch-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+
+                <!-- Add drop down menu -->
+                <div class="dropdown active">
+                    <li>
+                        <button class="dropbtn">Search
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </li>
+                    <div class="dropdown-content">
+                        <a href="./profile.html">Profile Search</a>
+                        <a href="./searchVehicle.html">Vehicle Search</a>
+                    </div>
+                </div>
+
+
+                <li><a href="./about.html">About</a></li>
+            </ul>
+
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+
+
+        <!-- Hero Image -->
+        <div>
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <h3>Vehicle Search</h3>
+
+                    <p class="hero-subtitle">
+                        <br>
+                        Search and find individual profiles by searching for their vehicle registration number below: 
+                        <br>
+                        <br>
+                    </p>
+
+                    <div class="searchBarContainer">
+                        <form class="searchBar">
+                            <input type="text" placeholder="Vehicle Registration Number" required>
+                            <button type="submit"><img src="../media/search-icon.png"></button>
+                        </form>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Taken from Associates page need to update with the vehicles  -->
+
+        <div class="vehicles">
+
+            <h1 class="tableTitle">Vehicles</h1>
+
+            <a href="">
+                <div class="vehicleContainer">
+
+                    <img src="../media/car icon.png">
+
+                    <div class="vehicleDiv">
+
+                        <p class="vehicles" id="vehicleReg">
+                            <strong>Vehicle Registration</strong> AA00 AAA
+                        </p>
+                        <p class="vehicles" id="vehicalMake">
+                            <strong>Make</strong> Lorem Ipsum
+                        </p>
+                        <p class="vehicles" id="vehicleModel">
+                            <strong>Model</strong> A0
+                        </p>
+                        <p class="vehicles" id="vehicleColour">
+                            <strong>Colour</strong> Lorem
+                        </p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="">
+                <div class="vehicleContainer">
+
+                    <img src="../media/car icon.png">
+
+                    <div class="vehicleDiv">
+
+                        <p class="vehicles" id="vehicleReg">
+                            <strong>Vehicle Registration</strong> AA00 AAA
+                        </p>
+                        <p class="vehicles" id="vehicalMake">
+                            <strong>Make</strong> Lorem Ipsum
+                        </p>
+                        <p class="vehicles" id="vehicleModel">
+                            <strong>Model</strong> A0
+                        </p>
+                        <p class="vehicles" id="vehicleColour">
+                            <strong>Colour</strong> Lorem
+                        </p>
+                    </div>
+
+                </div>
+            </a>
+
+            <a href="">
+                <div class="vehicleContainer">
+
+                    <img src="../media/car icon.png">
+
+                    <div class="vehicleDiv">
+
+                        <p class="vehicles" id="vehicleReg">
+                            <strong>Vehicle Registration</strong> AA00 AAA
+                        </p>
+                        <p class="vehicles" id="vehicalMake">
+                            <strong>Make</strong> Lorem Ipsum
+                        </p>
+                        <p class="vehicles" id="vehicleModel">
+                            <strong>Model</strong> A0
+                        </p>
+                        <p class="vehicles" id="vehicleColour">
+                            <strong>Colour</strong> Lorem
+                        </p>
+                    </div>
+
+                </div>
+            </a>
+
+
+        </div>
+
+        <br />
+
+        <footer class="backToBlack">
+            <div>
+                <br>
+                Copyright © Redshift 2022
+                <br>
+            </div>
+        </footer>
+        </div>
+
+        <script src="../assets/js/searchVehicle.js"></script>
+        <!-- AXIOS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous"></script>
+        <!-- IMPORT AJAX TO USE TO REFESH PAGE -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </body>
+
+    </html>

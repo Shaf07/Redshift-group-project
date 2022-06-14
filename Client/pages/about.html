@@ -1,0 +1,130 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="../style/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <input type="checkbox" name="" id="chk1">
+            <a href="../index.html">
+                <img class="logo" src="../media/Logo.png"></a>
+            <h2> Redshift </h2>
+            <div class="search-box">
+                <form>
+
+                    <input type="text" name="search" id="srch" placeholder="Enter Citizen ID">
+
+                    <button type="submit" id="srch-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+
+                <!-- Add drop down menu -->
+                <div class="dropdown">
+                    <li>
+                        <button class="dropbtn">Search
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </li>
+                    <div class="dropdown-content">
+                        <a href="./profile.html">Profile Search</a>
+                        <a href="./searchVehicle.html">Vehicle Search</a>
+                    </div>
+                </div>
+
+                <!-- <li><a href="./pages/search.html">Search</a></li> -->
+
+                <li><a class="active" href="./about.html">About</a></li>
+            </ul>
+
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+
+        <!-- Hero Image -->
+        <div>
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <h3>About Us</h3>
+
+                    <p class="hero-subtitle">
+                        Redshift is a leading provider of public data about people and their connections to others.
+                        <br>
+                        Redshift does not provide consumer reports. This site must not be used to determine an
+                        individual’s eligibility for credit, insurance, employment, housing or any other purpose covered
+                        by the GDPR.
+                        <br>
+                        <br>
+                        Click here for more guidance on <a
+                            href="https://www.gov.uk/government/publications/guide-to-the-general-data-protection-regulation" target="_blank">
+                            GDPR</a> (General Data Protection Regulation)
+                        <br>
+                        <br>
+                        Contact us for any enquiries by filling the form below.
+                    </p>
+
+                    <button type="button" class="hero-button" onclick="location.href='#contactForm'">
+                        Contact &raquo;
+                    </button>
+
+                </div>
+            </section>
+        </div>
+
+        <br>
+
+        <div>
+            <div id="contactForm" class="holder background centreText">
+                <h5> Contact us for any inquiries: </h5>
+
+                <br>
+                <form action="">
+
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Please enter your name here..">
+
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email" placeholder="Please enter your email here..">
+
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Please write your message here.."
+                        style="height:200px"></textarea>
+
+                    <input type="submit" value="Submit" onclick="return confirm('Thank you for your message!')">
+                </form>
+                <br>
+            </div>
+
+            <footer class="backToBlack">
+                <div>
+                    <br>
+                    Copyright © Redshift 2022
+                    <br>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+    <script src="../assets/js/about.js"></script>
+    <!-- AXIOS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous"></script>
+    <!-- IMPORT AJAX TO USE TO REFESH PAGE -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </html>

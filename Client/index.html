@@ -1,0 +1,133 @@
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Redshift Home</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="./style/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+            <input type="checkbox" name="" id="chk1">
+            <a href="./index.html">
+                <img class="logo" src="./media/Logo.png"></a>
+            <h2> Redshift </h2>
+            <div class="search-box">
+                <form>
+                    <input type="text" name="search" id="srch" placeholder="Enter Citizen ID">
+                    <button type="submit" id="srch-btn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+
+            <ul>
+                <li><a class="active" href="./index.html">Home</a></li>
+
+                <!-- Add drop down menu -->
+                <div class="dropdown">
+                    <li>
+                        <button class="dropbtn">Search
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                    </li>
+                    <div class="dropdown-content">
+                        <a href="./pages/profile.html">Profile Search</a>
+                        <a href="./pages/searchVehicle.html">Vehicle Search</a>
+                    </div>
+                </div>
+
+                <!-- <li><a href="./pages/search.html">Search</a></li> -->
+
+                <li><a href="./pages/about.html">About</a></li>
+            </ul>
+
+            <div class="menu">
+                <label for="chk1">
+                    <i class="fa fa-bars"></i>
+                </label>
+            </div>
+        </header>
+
+        <!-- Hero Image -->
+        <div>
+            <section class="hero">
+
+                <div class="hero-content">
+
+                    <h1 class="hero-title">
+                        Redshift
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Redshift is a leading provider of public data about people and their connections to others.
+                        <br>
+                        <br>
+                        With
+                        Redshift, it is easy to find the information you need. To search for someone’s profile,
+                        please enter their Citizen ID Number on the search bar above.
+                        <br>
+                        You can also search for individuals by entering their name on the Profile Search page, or by
+                        their
+                        vehicle details (registration number) on Vehicle Search page under Search button above, and
+                        you’ll get your results instantly.
+                    </p>
+
+                    <button type="button" class="hero-button" onclick="location.href='./pages/profile.html'">
+                        Go to Profile Search &raquo;
+                    </button>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- displaying images as links -->
+
+        <!-- <div class="container">
+            <div class="box">
+                <div class="imgBox">
+                    <a href="./pages/search.html">
+                        <img src="./media/search.jpg" alt="Search" width="420" height="240">
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <a href="./pages/profile.html">
+                        <img src="./media/profile.jpg" alt="Profile" width="420" height="240">
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <a href="./pages/about.html">
+                        <img src="./media/aboutus.jpg" alt="About Us" width="420" height="240">
+                    </a>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Footer -->
+        <footer class="backToBlack">
+            <div>
+                <br>
+                Copyright © Redshift 2022
+                <br>
+            </div>
+        </footer>
+
+        <script src="./assets/js/homePage.js"></script>
+        <!-- AXIOS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous"></script>
+        <!-- IMPORT AJAX TO USE TO REFESH PAGE -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    </body>
+
+    </html>
